@@ -1,0 +1,17 @@
+function findNthFibonacci(n) {
+    // Write your code here.
+    if (n == 1 || n == 2) {
+        return 1;
+    }
+    let nMinusOne = 1;
+    let nMinusTwo = 1;
+    let current = 0;
+    for (let i = 3; i <= n; i++){
+        current = nMinusOne + nMinusTwo;
+        nMinusTwo = nMinusOne;
+        nMinusOne = current;
+    }
+    return current
+}
+
+module.exports.findNthFibonacci = findNthFibonacci;
