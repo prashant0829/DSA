@@ -1,0 +1,17 @@
+void nStarTriangle(int n)
+{
+    // Write your code here.
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 0; j < i - 1; j++)
+        {
+            std::cout << " ";
+        }
+        for (int j = (n - i + 1) * 2 - 1; j >= 1; j--)
+        {
+            std::cout << "*";
+        }
+
+        std::cout << endl;
+    }
+}
