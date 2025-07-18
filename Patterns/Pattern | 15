@@ -1,0 +1,9 @@
+void nLetterTriangle(int n) {
+    int a = 64;
+    for(int i=0; i<n; i++){
+		for(int j = 1; j < n-i+1; j++){
+			std::cout <<static_cast<char>(j + a) <<" ";
+		}
+		std::cout<<endl;
+	}
+}
