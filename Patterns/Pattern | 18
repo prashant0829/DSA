@@ -1,0 +1,13 @@
+void alphaTriangle(int n)
+{
+    // Write your code here.
+    char c = 'A';
+    for (int i = n; i >= 1; i--)
+    {
+        for (int j = n; j >= i; j--)
+        {
+            std::cout << static_cast<char>(c + j - 1) << " ";
+        }
+        std::cout << endl;
+    }
+}
