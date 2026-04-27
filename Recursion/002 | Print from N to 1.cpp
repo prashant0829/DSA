@@ -9,8 +9,9 @@ void print(int n)
         cout << "1 ";
         return;
     }
-    print(n - 1);
     cout << n << " ";
+
+    print(n - 1);
 }
 
 int main()
