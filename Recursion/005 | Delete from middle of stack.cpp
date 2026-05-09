@@ -38,7 +38,7 @@ int main()
 
     deleteMiddle(v, n / 2 + 1);
 
-    cout << "Array array after deleting middle element\n";
+    cout << "Stack after deleting middle element\n";
     stack<int> temp;
 
     while (!v.empty())

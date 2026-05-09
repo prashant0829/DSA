@@ -49,7 +49,7 @@ int main()
 
     sort(v);
 
-    cout << "Sorted array:\n";
+    cout << "Sorted stack:\n";
     stack<int> temp;
 
     while (!v.empty())

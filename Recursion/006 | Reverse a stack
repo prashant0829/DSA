@@ -4,8 +4,10 @@
 
 using namespace std;
 
-void insert(stack<int>& v, int temp){
-    if(v.empty()){
+void insert(stack<int> &v, int temp)
+{
+    if (v.empty())
+    {
         v.push(temp);
         return;
     }
@@ -15,8 +17,10 @@ void insert(stack<int>& v, int temp){
     v.push(i);
 }
 
-void reverseStack(stack<int>& v){
-    if(v.empty()){
+void reverseStack(stack<int> &v)
+{
+    if (v.empty())
+    {
         return;
     }
     int temp = v.top();
@@ -25,34 +29,38 @@ void reverseStack(stack<int>& v){
     insert(v, temp);
 }
 
-int main() { 
+int main()
+{
     // Write C++ code here
     std::cout << "Enter the size of the array\n";
     int n;
     cin >> n;
     stack<int> v;
     cout << "Enter the values\n";
-    for(int i = 0; i < n; i++){
+    for (int i = 0; i < n; i++)
+    {
         int e;
         cin >> e;
         v.push(e);
     }
     cout << "\n";
-    
+
     reverseStack(v);
-    
-    cout << "Array array after deleting middle element\n";
+
+    cout << "Stack after deleting middle element\n";
     stack<int> temp;
 
-while(!v.empty()){
-    temp.push(v.top());
-    v.pop();
-}
+    while (!v.empty())
+    {
+        temp.push(v.top());
+        v.pop();
+    }
 
-while(!temp.empty()){
-    cout << temp.top() << " ";
-    temp.pop();
-}
-    
+    while (!temp.empty())
+    {
+        cout << temp.top() << " ";
+        temp.pop();
+    }
+
     return 0;
 }
