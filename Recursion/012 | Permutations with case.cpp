@@ -41,7 +41,7 @@ int main()
     string s;
     cout << "Enter a string\n";
     cin >> s;
-    cout << "Permutations with spaces are as follows\n";
+    cout << "Permutations with case are as follows\n";
     string output = "";
     output += s[0];
     s.erase(s.begin());
