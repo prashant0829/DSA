@@ -5,8 +5,6 @@
 
 using namespace std;
 
-set<string> mySet;
-
 void solve(string input, string output)
 {
     if (input.length() == 0)
