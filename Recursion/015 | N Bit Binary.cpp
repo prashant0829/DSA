@@ -8,24 +8,17 @@ using namespace std;
 
 void solve(int n, string s, int countOfOne, int countOfZero)
 {
-    if (s.length() == n)
+    if (n == 0)
     {
         cout << s << "\n";
         return;
     }
 
+    solve(n - 1, s + "1", countOfOne + 1, countOfZero);
+
     if (countOfOne > countOfZero)
     {
-        string s1 = s + "0";
-        string s2 = s + "1";
-        solve(n, s1, countOfOne, countOfZero + 1);
-        solve(n, s2, countOfOne + 1, countOfZero);
-    }
-
-    if (countOfOne == countOfZero)
-    {
-        string s1 = s + "1";
-        solve(n, s1, countOfOne + 1, countOfZero);
+        solve(n - 1, s + "0", countOfOne, countOfZero + 1);
     }
 }
 
